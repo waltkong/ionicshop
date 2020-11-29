@@ -1,1 +1,3 @@
-112
+我一气之下执行了“git credential-manager uninstall”，直接把这玩意儿删了，我看你还怎么弹。
+
+然后世界清静了，无论是git bash还是sourcetree，直接push就行，不需要输入用户密码了。
