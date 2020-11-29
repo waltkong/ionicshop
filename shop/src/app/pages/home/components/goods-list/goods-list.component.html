@@ -1,0 +1,30 @@
+<ion-list>
+  <div *ngFor="let item of datalist" class="goods_item">
+    <div class="goods_start" (click)="goToDetailPage(item)">
+      <img src="{{item.src}}">
+    </div>
+    <div class="goods_middle" (click)="goToDetailPage(item)">
+      <div class="goods_title">
+        {{item.name}}
+      </div>
+      <div class="goods_old_price">
+        原价: ￥{{item.old_price}}
+      </div>
+      <div class="goods_price">
+        ￥{{item.price}}
+      </div>
+    </div>
+    <div class="goods_end" (click)="addToCart(item)">
+      <img src="assets/upload/cartadd.png" />
+    </div>
+  </div>
+</ion-list>
+<p *ngIf="isEnd===true" style="text-align: center;margin-top: 10px">我是有底线的...</p>
+
+<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="加载...">
+
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>

@@ -1,0 +1,85 @@
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="middle">购物车</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="cart_box">
+    <div class="head_box">
+      <div class="checkbox">
+        <ion-checkbox></ion-checkbox>
+      </div>
+      <div class="head_box_content">
+        <span>全选</span>
+      </div>
+      <div class="head_box_end" (click)="doEditOrFinish()">
+        <span>{{headText}}</span>
+      </div>
+    </div>
+
+    <div class="divider1">
+
+    </div>
+
+    <div class="body_box" *ngFor="let item of datalist">
+      <div class="checkbox">
+        <ion-checkbox></ion-checkbox>
+      </div>
+      <div class="body_box_content">
+        <div class="goods_img">
+          <img src="{{item.src}}" />
+        </div>
+        <div class="goods_info">
+          <div class="goods_name">
+            <span>{{item.name}}</span>
+          </div>
+
+          <div class="goods_price_box" *ngIf="isEdit!==true">
+            <div class="goods_price">
+              <span> ￥{{item.price}}</span>
+            </div>
+            <div class="goods_old_price">
+              <span> ￥{{item.old_price}} </span>
+            </div>
+          </div>
+
+          <div class="goods_add_cart_box" *ngIf="isEdit===true">
+            <div class="minus">
+              <img src="assets/upload/minus.png" />
+            </div>
+            <div class="number">
+              <span> {{item.count}} </span>
+            </div>
+            <div class="plus">
+              <img src="assets/upload/add.png" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="body_box_end">
+          <div class="show_num_box" *ngIf="isEdit!==true">
+            <span> ✖{{item.count}}</span>
+          </div>
+          <div class="delete_box" *ngIf="isEdit===true">
+            <span>删除</span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom_box">
+    <div class="bottom_one">
+      <span>合计：￥{{totalPrice}}</span>
+    </div>
+    <div class="bottom_two">
+      <span>立即下单</span>
+    </div>
+  </div>
+  <div class="bottom_blank">
+
+  </div>
+
+
+</ion-content>

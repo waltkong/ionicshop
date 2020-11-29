@@ -1,0 +1,33 @@
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="middle">我的</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="person_box">
+    <div class="person_img">
+      <img src="assets/upload/person_blank.png" />
+    </div>
+    <div class="person_text">
+      <span> 马云 </span>
+    </div>
+  </div>
+
+  <div class="divider">
+
+  </div>
+
+  <div class="tool_box">
+    <div class="tool_item" *ngFor="let item of toolList" (click)="gotoPage(item.route)">
+      <ion-icon name="{{item.icon}}"></ion-icon>
+      <div class="tool_text">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+
+

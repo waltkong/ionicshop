@@ -1,0 +1,16 @@
+<div class="divider">
+
+</div>
+<div class="nav_container">
+  <div class="goods_nav_item" *ngFor="let item of datalist" (click)="goToGoodsListPage(item.id)">
+    <div class="goods_nav_img">
+      <img src="{{item.src}}" />
+    </div>
+    <div class="goods_nav_text">
+      {{item.name}}
+    </div>
+  </div>
+</div>
+
+<div class="divider2">
+</div>

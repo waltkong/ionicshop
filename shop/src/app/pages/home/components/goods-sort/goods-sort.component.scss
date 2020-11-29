@@ -1,0 +1,40 @@
+.tab_box{
+  padding: 5px 0;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+
+  .tab_item{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+    width: 30%;
+
+    span{
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .tab_item_divider{
+    width: 3px;
+    height: 100%;
+    background-color: rgb(241,241,241);
+  }
+
+
+}
+
+.tab_box_divider{
+  margin-top: 5px;
+  height: 3px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(241,241,241);
+}

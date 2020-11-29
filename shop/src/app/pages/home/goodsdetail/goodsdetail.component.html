@@ -1,0 +1,44 @@
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="middle">产品详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="img_box">
+    <img src="{{goodsItem.src}}" />
+  </div>
+  <div class="divider1">
+
+  </div>
+  <div class="info_box">
+    <div class="info_name">
+      <span>{{goodsItem.name}}</span>
+    </div>
+    <div class="info_price_box">
+      <div class="price">
+        <span>￥{{goodsItem.price}}</span>
+      </div>
+      <div class="old_price">
+        <span>￥{{goodsItem.old_price}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="divider1">
+
+  </div>
+  <div class="attribute_box">
+    <div class="attribute_text">
+      <span>产品属性信息</span>
+    </div>
+    <div class="attribute_divider">
+
+    </div>
+    <div class="attribute_list_box">
+      <div class="attribute_list_item" *ngFor="let item of attributeList">
+        <span>{{item}}</span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

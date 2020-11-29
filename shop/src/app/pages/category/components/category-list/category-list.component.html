@@ -1,0 +1,38 @@
+<div class="cat_list_box">
+  <div class="left" >
+    <div class="left_item" *ngFor="let item of bigCategoryList" [class.active]="item.id == categoryId " tappable (click)="changeBigCategory(item.id)">
+      <div class="category_img">
+        <img src="{{item.src}}" />
+      </div>
+      <div class="category_name">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+    <div class="left_item" *ngFor="let item of bigCategoryList" [class.active]="item.id == categoryId " tappable (click)="changeBigCategory(item.id)">
+      <div class="category_img">
+        <img src="{{item.src}}" />
+      </div>
+      <div class="category_name">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+    <div class="left_item" *ngFor="let item of bigCategoryList" [class.active]="item.id == categoryId " tappable (click)="changeBigCategory(item.id)">
+      <div class="category_img">
+        <img src="{{item.src}}" />
+      </div>
+      <div class="category_name">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right" >
+    <div class="right_item" *ngFor="let item of bigCategoryList" tappable (click)="clickSubCategory(item.id)" >
+      <div class="right_img">
+        <img  src="{{item.src}}"/>
+      </div>
+      <div class="right_name">
+        <span>{{item.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>
